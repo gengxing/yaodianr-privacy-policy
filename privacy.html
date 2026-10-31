@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--
+  药点儿 / Yaodianr 隐私政策
+  ------------------------------------------------------------------
+  发布前必须替换的占位符（共 2 个，三语各出现一次）：
+    [开发者名称] / [開發者名稱] / [Developer name]
+    [联系邮箱]   / [聯絡信箱]  / [contact email]
+  建议用编辑器全局替换，替换后搜索 "ph" 确认没有残留。
+
+  语言策略：默认 English，不跟随浏览器语言（避免同一 URL 在不同地区显示不同内容）。
+  用户点过语言按钮后记住选择；privacy.html?lang=zh-CN / zh-Hant / en 可直链到指定语言。
+
+  发布方式：放到 GitHub Pages / Cloudflare Pages 仓库根目录，
+  对外地址形如 https://<用户名>.github.io/yaodianr/privacy.html
+  把这个地址填进 Play Console 的「隐私权政策」字段，
+  并确保应用内「设置 → 隐私说明」链到同一地址。
+  ------------------------------------------------------------------
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Yaodianr</title>
+<meta name="description" content="Yaodianr privacy policy: no collection, no upload, medication data stays on your device. English / 简体中文 / 繁體中文.">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --brand: #2f6f6b;
+    --brand-soft: #e6f0ee;
+    --bg: #fbf9f4;
+    --card: #ffffff;
+    --text: #1d2422;
+    --muted: #5d6b67;
+    --line: #dfe5e2;
+    --ph: #a8641a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --brand: #7fc4bd;
+      --brand-soft: #1d2f2d;
+      --bg: #14181a;
+      --card: #1a1f21;
+      --text: #e8ecea;
+      --muted: #9aa8a4;
+      --line: #2b3335;
+      --ph: #e0a75f;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                 "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    font-size: 16px;
+    line-height: 1.78;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 22px 72px; }
+  header { padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+  .kicker {
+    display: inline-block; font-size: 13px; letter-spacing: .08em;
+    color: var(--brand); background: var(--brand-soft);
+    padding: 4px 10px; border-radius: 999px; margin-bottom: 14px;
+  }
+  h1 { font-size: 26px; line-height: 1.35; margin: 0 0 6px; font-weight: 700; letter-spacing: -.01em; }
+  .sub { color: var(--muted); font-size: 14px; margin: 0; }
+  .langs { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; }
+  .langs button {
+    font: inherit; font-size: 14px; cursor: pointer;
+    padding: 7px 14px; border-radius: 999px;
+    border: 1px solid var(--line); background: var(--card); color: var(--text);
+    transition: border-color .15s, background .15s, color .15s;
+  }
+  .langs button:hover { border-color: var(--brand); }
+  .langs button[aria-pressed="true"] {
+    background: var(--brand); border-color: var(--brand); color: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    .langs button[aria-pressed="true"] { color: #101413; }
+  }
+  section.doc { display: none; }
+  section.doc.active { display: block; }
+  h2 {
+    font-size: 17px; margin: 34px 0 10px; font-weight: 700;
+    padding-left: 11px; border-left: 3px solid var(--brand); line-height: 1.5;
+  }
+  p { margin: 0 0 12px; }
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--brand); }
+  strong { font-weight: 650; }
+  .lead {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 16px 18px; margin: 26px 0 8px;
+  }
+  .lead p:last-child { margin-bottom: 0; }
+  .ph {
+    color: var(--ph); border-bottom: 1px dashed currentColor; padding: 0 2px;
+  }
+  footer {
+    margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 13px;
+  }
+  a { color: var(--brand); }
+  @media print {
+    body { background: #fff; color: #000; }
+    .langs { display: none; }
+    section.doc { display: none !important; }
+    section.doc.active { display: block !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <span class="kicker">Yaodianr · 药点儿 · 藥點兒</span>
+    <h1 id="doc-title">Privacy Policy</h1>
+    <p class="sub" id="doc-sub">Effective date: October 31, 2026</p>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="zh-CN" aria-pressed="false">简体中文</button>
+      <button type="button" data-lang="zh-Hant" aria-pressed="false">繁體中文</button>
+    </div>
+  </header>
+
+  <!-- ==================== 简体中文 ==================== -->
+  <section class="doc" lang="zh-CN" data-doc="zh-CN">
+    <div class="lead">
+      <p><strong>一句话：药点儿不收集、不上传你的任何信息。</strong>你的药名、提醒计划和服药记录只保存在你自己的手机上。本应用没有账号系统，正式版本也不申请网络权限。</p>
+    </div>
+
+    <h2>1. 这份政策说的是什么</h2>
+    <p>本政策说明药点儿（英文名 Yaodianr，以下简称“本应用”）如何处理你的信息。本应用由 <span class="ph">[开发者名称]</span> 开发并发布。</p>
+
+    <h2>2. 我们处理哪些信息</h2>
+    <p>只有你主动填写的内容，且全部保存在本机：</p>
+    <ul>
+      <li>药品名称</li>
+      <li>可选的药量说明（你自己输入的自由文本）</li>
+      <li>可选的备注</li>
+      <li>提醒时间与重复规则</li>
+      <li>每次提醒的处理记录：确认服用、稍后提醒或跳过，以及确认时间</li>
+    </ul>
+    <p>除此之外，本应用不读取你的其他信息。</p>
+
+    <h2>3. 信息存在哪里</h2>
+    <p>上述信息保存在你设备上的应用本地数据库中，只有本应用可以访问。本应用没有服务器，没有账号体系，不提供云同步，也不支持跨设备恢复。</p>
+
+    <h2>4. 我们不做这些事</h2>
+    <ul>
+      <li>不收集设备标识、位置、通讯录、相册、麦克风或相机信息</li>
+      <li>不上传、不共享、不出售你的用药数据</li>
+      <li>不把药名或提醒记录用于广告、用户画像或任何第三方分析</li>
+      <li>当前版本不含广告 SDK，也不含第三方统计或崩溃上报 SDK</li>
+    </ul>
+
+    <h2>5. 应用申请的权限及用途</h2>
+    <ul>
+      <li><strong>通知</strong>：在你设定的时间发出用药提醒，并在通知里提供确认服用、稍后提醒、跳过这次三个操作</li>
+      <li><strong>精确闹钟</strong>：让提醒尽量准点触发。不授予这项权限时，本应用无法保证按时提醒</li>
+      <li><strong>开机启动</strong>：设备重启后恢复后续提醒</li>
+      <li><strong>唤醒锁</strong>：提醒触发时短暂唤醒设备，以便发出通知</li>
+    </ul>
+    <p>正式发布版本不申请网络权限，因此本应用在技术上无法把你的数据传到任何地方。</p>
+
+    <h2>6. 系统自动备份</h2>
+    <p>Android 系统可能会把应用数据自动备份到你的个人云账号。是否备份、备份到哪里、恢复后能否在其他设备上使用，由你的系统账号和设置决定，本应用无法控制，也不把这种情况视为本应用的云同步能力。你可以在系统设置中关闭本应用的备份。</p>
+
+    <h2>7. 你的控制权与数据删除</h2>
+    <ul>
+      <li>在应用内「设置」页可以随时执行「清除全部本地数据」，清除后不可恢复</li>
+      <li>卸载本应用会同时删除本机数据</li>
+      <li>由于没有账号，不存在需要向服务器申请删除的数据</li>
+      <li>桌面小组件会在桌面上显示药名，你可以在系统里移除组件，或在应用内开启「锁屏隐藏用药详情」</li>
+    </ul>
+
+    <h2>8. 儿童与未成年人</h2>
+    <p>本应用面向 18 岁及以上的成年人，不面向儿童，也不会主动收集儿童的信息。</p>
+
+    <h2>9. 政策更新</h2>
+    <p>本政策变更时，我们会更新本页面并修改上方生效日期。若变更涉及信息处理方式的实质调整，我们会在应用内提示。</p>
+
+    <h2>10. 医疗免责声明</h2>
+    <p>本应用是提醒与记录工具，不是医疗器械，不提供诊断、治疗建议或剂量指导。提醒依赖系统权限和设备状态，可能因权限被关闭、系统限制或厂商后台策略而延迟或失败，请勿把本应用作为唯一的用药保障。用药方案请遵循医生或药师的嘱咐。</p>
+
+    <h2>11. 联系我们</h2>
+    <p>对本政策有任何疑问，请联系：<span class="ph">[联系邮箱]</span>。开发者：<span class="ph">[开发者名称]</span>。</p>
+  </section>
+
+  <!-- ==================== 繁體中文 ==================== -->
+  <section class="doc" lang="zh-Hant" data-doc="zh-Hant">
+    <div class="lead">
+      <p><strong>一句話：藥點兒不蒐集、不上傳你的任何資訊。</strong>你的藥名、提醒計畫和服藥紀錄只保存在你自己的手機上。本應用程式沒有帳號系統，正式版本也不申請網路權限。</p>
+    </div>
+
+    <h2>1. 這份政策說明什麼</h2>
+    <p>本政策說明藥點兒（英文名 Yaodianr，以下簡稱「本應用程式」）如何處理你的資訊。本應用程式由 <span class="ph">[開發者名稱]</span> 開發並發布。</p>
+
+    <h2>2. 我們處理哪些資訊</h2>
+    <p>只有你主動填寫的內容，且全部保存在本機：</p>
+    <ul>
+      <li>藥品名稱</li>
+      <li>可選的藥量說明（你自己輸入的自由文字）</li>
+      <li>可選的備註</li>
+      <li>提醒時間與重複規則</li>
+      <li>每次提醒的處理紀錄：確認服用、稍後提醒或略過，以及確認時間</li>
+    </ul>
+    <p>除此之外，本應用程式不讀取你的其他資訊。</p>
+
+    <h2>3. 資訊保存在哪裡</h2>
+    <p>上述資訊保存在你裝置上的應用程式本機資料庫中，只有本應用程式可以存取。本應用程式沒有伺服器，沒有帳號系統，不提供雲端同步，也不支援跨裝置還原。</p>
+
+    <h2>4. 我們不做這些事</h2>
+    <ul>
+      <li>不蒐集裝置識別碼、位置、聯絡人、相簿、麥克風或相機資訊</li>
+      <li>不上傳、不共享、不出售你的用藥資料</li>
+      <li>不把藥名或提醒紀錄用於廣告、使用者輪廓或任何第三方分析</li>
+      <li>目前版本不含廣告 SDK，也不含第三方統計或當機回報 SDK</li>
+    </ul>
+
+    <h2>5. 應用程式申請的權限及用途</h2>
+    <ul>
+      <li><strong>通知</strong>：在你設定的時間發出用藥提醒，並在通知中提供確認服用、稍後提醒、略過這次三個操作</li>
+      <li><strong>精確鬧鐘</strong>：讓提醒盡量準時觸發。未授予這項權限時，本應用程式無法保證按時提醒</li>
+      <li><strong>開機啟動</strong>：裝置重新啟動後還原後續提醒</li>
+      <li><strong>喚醒鎖</strong>：提醒觸發時短暫喚醒裝置，以便發出通知</li>
+    </ul>
+    <p>正式發布版本不申請網路權限，因此本應用程式在技術上無法把你的資料傳到任何地方。</p>
+
+    <h2>6. 系統自動備份</h2>
+    <p>Android 系統可能會把應用程式資料自動備份到你的個人雲端帳號。是否備份、備份到哪裡、還原後能否在其他裝置上使用，由你的系統帳號與設定決定，本應用程式無法控制，也不把這種情況視為本應用程式的雲端同步能力。你可以在系統設定中關閉本應用程式的備份。</p>
+
+    <h2>7. 你的控制權與資料刪除</h2>
+    <ul>
+      <li>在應用程式內「設定」頁可以隨時執行「清除全部本機資料」，清除後無法復原</li>
+      <li>解除安裝本應用程式會同時刪除本機資料</li>
+      <li>由於沒有帳號，不存在需要向伺服器申請刪除的資料</li>
+      <li>桌面小工具會在桌面上顯示藥名，你可以在系統中移除小工具，或在應用程式內開啟「鎖定螢幕時隱藏用藥詳情」</li>
+    </ul>
+
+    <h2>8. 兒童與未成年人</h2>
+    <p>本應用程式面向 18 歲及以上的成年人，不面向兒童，也不會主動蒐集兒童的資訊。</p>
+
+    <h2>9. 政策更新</h2>
+    <p>本政策變更時，我們會更新本頁面並修改上方生效日期。若變更涉及資訊處理方式的實質調整，我們會在應用程式內提示。</p>
+
+    <h2>10. 醫療免責聲明</h2>
+    <p>本應用程式是提醒與紀錄工具，不是醫療器材，不提供診斷、治療建議或劑量指示。提醒依賴系統權限與裝置狀態，可能因權限被關閉、系統限制或廠商背景策略而延遲或失敗，請勿把本應用程式當作唯一的用藥保障。用藥方式請遵照醫師或藥師的囑咐。</p>
+
+    <h2>11. 聯絡我們</h2>
+    <p>對本政策有任何疑問，請聯絡：<span class="ph">[聯絡信箱]</span>。開發者：<span class="ph">[開發者名稱]</span>。</p>
+  </section>
+
+  <!-- ==================== English ==================== -->
+  <section class="doc active" lang="en" data-doc="en">
+    <div class="lead">
+      <p><strong>In one line: Yaodianr does not collect or upload anything.</strong> Your medicine names, reminders and dose history stay on your own phone. There is no account system, and the production build does not request network access at all.</p>
+    </div>
+
+    <h2>1. What this policy covers</h2>
+    <p>This policy explains how Yaodianr (“the app”) handles your information. The app is developed and published by <span class="ph">[Developer name]</span>.</p>
+
+    <h2>2. What the app processes</h2>
+    <p>Only what you enter yourself, and all of it is stored on the device:</p>
+    <ul>
+      <li>Medicine names</li>
+      <li>An optional dose note (free text you type)</li>
+      <li>An optional note</li>
+      <li>Reminder times and repeat rules</li>
+      <li>The outcome of each reminder: taken, snoozed or skipped, plus the time you confirmed it</li>
+    </ul>
+    <p>The app does not read anything else about you.</p>
+
+    <h2>3. Where the data is stored</h2>
+    <p>This data is kept in the app's local database on your device, accessible only to the app. There is no server, no account system, no cloud sync and no cross-device restore.</p>
+
+    <h2>4. What the app never does</h2>
+    <ul>
+      <li>No collection of device identifiers, location, contacts, photos, microphone or camera</li>
+      <li>No upload, sharing or sale of your medication data</li>
+      <li>No use of medicine names or reminder history for advertising, profiling or third-party analytics</li>
+      <li>No ad SDK in the current version, and no third-party analytics or crash-reporting SDK</li>
+    </ul>
+
+    <h2>5. Permissions and why they are needed</h2>
+    <ul>
+      <li><strong>Notifications</strong>: to alert you at the times you set, with actions to confirm, snooze or skip</li>
+      <li><strong>Exact alarms</strong>: so a reminder fires on time. Without it, the app cannot guarantee timely reminders</li>
+      <li><strong>Run at startup</strong>: to restore upcoming reminders after the device restarts</li>
+      <li><strong>Wake lock</strong>: to briefly wake the device so a reminder notification can be delivered</li>
+    </ul>
+    <p>The production build does not request network access, so it is technically incapable of sending your data anywhere.</p>
+
+    <h2>6. System backup</h2>
+    <p>Android may automatically back up app data to your own cloud account. Whether a backup happens, where it is stored, and whether it can be restored on another device are determined by your system account and settings. The app does not control this and does not treat it as a cloud sync feature. You can turn off backup for this app in system settings.</p>
+
+    <h2>7. Your control and deleting data</h2>
+    <ul>
+      <li>“Clear all local data” in Settings removes everything at any time; this cannot be undone</li>
+      <li>Uninstalling the app deletes the data on the device</li>
+      <li>Because there is no account, there is no server-side data to request deletion of</li>
+      <li>The home screen widget shows medicine names on your home screen; you can remove the widget, or enable “Hide medication details on the lock screen” in the app</li>
+    </ul>
+
+    <h2>8. Children</h2>
+    <p>The app is intended for adults aged 18 and over. It is not directed at children and does not knowingly collect information from children.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>When this policy changes we will update this page and the effective date above. If a change materially affects how information is handled, we will tell you inside the app.</p>
+
+    <h2>10. Medical disclaimer</h2>
+    <p>The app is a reminder and record-keeping tool. It is not a medical device and does not provide diagnosis, treatment or dosing advice. Reminders depend on system permissions and device state, and may be delayed or fail because of disabled permissions, system limits or manufacturer background restrictions. Please do not rely on this app as your only safeguard for taking medication. Follow the instructions of your doctor or pharmacist.</p>
+
+    <h2>11. Contact</h2>
+    <p>Questions about this policy: <span class="ph">[contact email]</span>. Developer: <span class="ph">[Developer name]</span>.</p>
+  </section>
+
+  <footer>
+    <p>药点儿 · Yaodianr — 本页同时提供简体中文、繁體中文和 English。<br>
+    This page is available in Simplified Chinese, Traditional Chinese and English.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var titles = {
+    "zh-CN": ["隐私政策", "生效日期：2026 年 10 月 31 日"],
+    "zh-Hant": ["隱私政策", "生效日期：2026 年 10 月 31 日"],
+    "en": ["Privacy Policy", "Effective date: October 31, 2026"]
+  };
+  var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-lang]"));
+  var docs = Array.prototype.slice.call(document.querySelectorAll("section.doc"));
+
+  function apply(lang) {
+    if (!titles[lang]) lang = "en";
+    docs.forEach(function (s) {
+      s.classList.toggle("active", s.getAttribute("data-doc") === lang);
+    });
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+    });
+    document.documentElement.lang = lang;
+    document.getElementById("doc-title").textContent = titles[lang][0];
+    document.getElementById("doc-sub").textContent = titles[lang][1];
+    document.title = titles[lang][0] + " · Yaodianr";
+    try { localStorage.setItem("yaodianr-privacy-lang", lang); } catch (e) {}
+  }
+
+  function preferred() {
+    // ?lang=zh-CN / zh-Hant / en 可直链到指定语言（App 内跳转也可用）
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      if (q && titles[q]) return q;
+    } catch (e) {}
+    // 用户主动切换过的语言优先，否则默认英文。
+    // 不再按 navigator.language 猜测，避免同一 URL 在不同地区显示不同语言。
+    var saved = null;
+    try { saved = localStorage.getItem("yaodianr-privacy-lang"); } catch (e) {}
+    if (saved && titles[saved]) return saved;
+    return "en";
+  }
+
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () { apply(b.getAttribute("data-lang")); });
+  });
+
+  apply(preferred());
+})();
+</script>
+</body>
+</html>
